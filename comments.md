@@ -15,5 +15,5 @@ git add .
 git commit -m 'third'
 gst
 
-python3 hangman.py
+python3 ticTacToe.py
 and so on...
