@@ -33,7 +33,14 @@ def isBoardFull(board):
 
 
 def isWinner(board, letter):
-    return (board[1] == letter and board[2] == letter and board[3] == letter) or (board[4] == letter and board[5] == letter and board[6] == letter) or (board[7] == letter and board[8] == letter and board[9] == letter) or (board[1] == letter and board[4] == letter and board[7] == letter) or (board[2] == letter and board[5] == letter and board[8] == letter) or (board[3] == letter and board[6] == letter and board[9] == letter) or (board[1] == letter and board[5] == letter and board[9] == letter) or (board[3] == letter and board[5] == letter and board[7] == letter)
+    return ((board[1] == letter and board[2] == letter and board[3] == letter) 
+	or (board[4] == letter and board[5] == letter and board[6] == letter) 
+	or (board[7] == letter and board[8] == letter and board[9] == letter) 
+	or (board[1] == letter and board[4] == letter and board[7] == letter) 
+	or (board[2] == letter and board[5] == letter and board[8] == letter) 
+	or (board[3] == letter and board[6] == letter and board[9] == letter) 
+	or (board[1] == letter and board[5] == letter and board[9] == letter) 
+	or (board[3] == letter and board[5] == letter and board[7] == letter))
 
 def playerMove():
 	run = True
