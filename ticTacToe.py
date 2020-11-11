@@ -126,3 +126,12 @@ def main():
 
 	if isBoardFull(board):
 		print("The game is in a Tie.")
+
+while True:
+	x = input("Do you want to play a game of Tic Tac Toe? (y/n) ")
+	if x.lower() == 'y':
+		board = [' ' for x in range(10)]
+		print('--------------------------')
+		main()
+	else:
+		break
