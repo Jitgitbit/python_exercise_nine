@@ -99,3 +99,30 @@ def selectRandom(li):
 	ln = len(li)
 	r = random.randrange(0,ln)
 	return li[r]
+
+def main():
+	print("Welcome to the game of Tic Tac Toe!")
+	printBoard(board)
+
+	while not(isBoardFull(board)):
+		if not(isWinner(board, 'O')):
+			playerMove()
+			printBoard(board)
+		else:
+			print("You have lost the game!")
+			break
+
+		if not(isWinner(board, 'X')):
+			move = computerMove
+			if move == 0:
+				print("The game is tied.")
+			else:
+				insertLetter('O', move)
+				print("Computer placed an 'O' on position ", move, ":")
+				printBoard(board)
+		else:
+			print("You win this game!")
+			break
+
+	if isBoardFull(board):
+		print("The game is in a Tie.")
